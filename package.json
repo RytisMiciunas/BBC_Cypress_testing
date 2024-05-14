@@ -1,17 +1,16 @@
 {
     "name": "cypress_task",
     "version": "1.0.0",
-    "description": "��#\u0000 \u0000C\u0000y\u0000p\u0000r\u0000e\u0000s\u0000s\u0000_\u0000t\u0000e\u0000s\u0000t\u0000i\u0000n\u0000g\u0000\r\u0000 \u0000",
+    "description": "Cypress testing project",
     "main": "cypress.config.js",
     "scripts": {
         "test-chrome": "npx cypress run --browser chrome --spec 'cypress/e2e/HomepageRendering/works_on_Chrome.js'",
         "test:firefox": "npx cypress run --browser firefox --spec 'cypress/e2e/HomepageRendering/works_on_Firefox.js'",
         "test:edge": "npx cypress run --browser edge --spec 'cypress/e2e/HomepageRendering/works_on_Edge.js'",
-        "runAllTests-headless": "npx cypress run",
         "test:ArticleViewing": "npx cypress run --spec 'cypress/e2e/articleViewing/*'",
         "test:CyberSecurity": "npx cypress run --spec 'cypress/e2e/CyberSecurity/*'",
         "test:HomepageNavigation": "npx cypress run --spec 'cypress/e2e/HomepageNavigation/*'",
-        "test:HomepageRendering": "npm run test:chrome & npm run test:firefox & npm run test:edge",
+        "test:HomepageRendering": "npm run test-chrome & npm run test:firefox & npm run test:edge",
         "test:LanguageSelection": "npx cypress run --spec 'cypress/e2e/LanguageSelection/*'",
         "test:NewsletterSubscription": "npx cypress run --spec 'cypress/e2e/NewsletterSubscription/*'",
         "test:ResponsiveDesign": "npx cypress run --spec 'cypress/e2e/ResponsiveDesign/*'",
@@ -22,6 +21,8 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "cross-env": "^7.0.3",
+        "cypress": "^13.9.0",
         "cypress-plugin-tab": "^1.0.5"
     },
     "dependencies": {

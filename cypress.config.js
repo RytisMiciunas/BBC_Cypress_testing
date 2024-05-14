@@ -11,9 +11,6 @@ module.exports = defineConfig({
     baseUrl: url.landingPage,
     viewportHeight: 1080,
     viewportWidth: 1920,
-    "compilerOptions": {
-        "types": ["cypress", "node", "cypress-real-events"]
-      },
     defaultCommandTimeout: 10000,
     includeShadowDom: true
   },
