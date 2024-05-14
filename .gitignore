@@ -1,0 +1,19 @@
+# Cypress specific files/directories
+node_modules/
+.cypress/
+.cy/
+*.log
+ 
+screenshots
+# Cypress generated videos, screenshots, and other artifacts
+cypress/screenshots/
+cypress/videos/
+ 
+# Cypress cache
+.cypress_cache/
+ 
+ 
+# Dependency directories
+# Remove the comments below if you want to include them
+# /node_modules/
+# /bower_components/
