@@ -1,0 +1,19 @@
+{
+    "name": "cypress_task",
+    "version": "1.0.0",
+    "description": "��#\u0000 \u0000C\u0000y\u0000p\u0000r\u0000e\u0000s\u0000s\u0000_\u0000t\u0000e\u0000s\u0000t\u0000i\u0000n\u0000g\u0000\r\u0000 \u0000",
+    "main": "cypress.config.js",
+    "scripts": {
+        "test:chrome": "npx cypress run --browser chrome --spec 'cypress/e2e/HomepageRendering/works_on_Chrome.js'",
+        "test:firefox": "npx cypress run --browser chrome --spec 'cypress/e2e/HomepageRendering/works_on_Firefox.js'",
+        "test:edge": "npx cypress run --browser chrome --spec 'cypress/e2e/HomepageRendering/works_on_Edge.js'"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "cypress-plugin-tab": "^1.0.5"
+    },
+    "dependencies": {
+        "cypress-real-events": "^1.12.0"
+    }
+}
