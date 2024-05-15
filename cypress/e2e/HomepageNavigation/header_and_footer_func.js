@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
-const { url, homePage, textInPages } = require('../../support/selectors')
+const { url, homePage, textInPages, navButtonsLocatorAndUrl } = require('../../support/selectors')
+const { clickOnNavButtonFooter } = require("../../support/functions");
+
 
 describe('Test header and footer of homepage', () => {
 
@@ -27,31 +29,13 @@ describe('Test header and footer of homepage', () => {
 
     });
 
-    it('Test Case 9. Footer Homepage, News, Sport Business and Innovation button test', () => {
-        cy.get(homePage.newsButtons).eq(1).scrollIntoView().click({force: true});
-        cy.url().should('eq', url.newsPage);
-        cy.get(homePage.homeButtons).eq(1).scrollIntoView().click({force: true});
-        cy.url().should('eq', url.landingPage);
-        cy.get(homePage.sportButtons).eq(1).scrollIntoView().click({force: true});
-        cy.url().should('eq', url.sportPage);
-        cy.go('back');
-        cy.get(homePage.businessButtons).eq(1).scrollIntoView().click({force: true});
-        cy.url().should('eq', url.businessPage);
-        cy.get(homePage.innovationButtons).eq(1).scrollIntoView().click({force: true});
-        cy.url().should('eq', url.innovationPage);
-    });
-
-    it('Test Case 10. Travel, Earth, Video and Live button test', () => {
-        cy.get(homePage.cultureButtons).eq(1).scrollIntoView().click({force: true});
-        cy.url().should('eq', url.culturePage);
-        cy.get(homePage.travelButtons).eq(1).scrollIntoView().click({force: true});
-        cy.url().should('eq', url.travelPage);
-        cy.get(homePage.earthButtons).eq(1).scrollIntoView().click({force: true});
-        cy.url().should('eq', url.earthPage);
-        cy.get(homePage.videoButtons).eq(1).scrollIntoView().click({force: true});
-        cy.url().should('eq', url.videoPage);
-        cy.get(homePage.liveButtons).eq(1).scrollIntoView().click({force: true});
-        cy.url().should('eq', url.livePage);
+    it('Test Case 9, 10. footer navigation buttons test', () => {
+        navButtonsLocatorAndUrl.forEach((element) => {
+            // Access the properties of each element
+            const { url, selector } = element;
+            // Call the function with the URL and selector
+            clickOnNavButtonFooter(selector, url);
+        });
     });
 
     it('Test Case 11. Audio, Weather and BBC Shop button test', () => {
@@ -95,7 +79,7 @@ describe('Test header and footer of homepage', () => {
         });
     });
 
-    it.only('Test Case 13. Contact The BBC, Advertise With Us, Do Not Share Or Sell Info, Contact Technical Support, Read About Our Approach To External Linking button test', () => {
+    it('Test Case 13. Contact The BBC, Advertise With Us, Do Not Share Or Sell Info, Contact Technical Support, Read About Our Approach To External Linking button test', () => {
         cy.get(homePage.contactTheBBCButton).scrollIntoView().click({force: true});
         cy.origin(url.BBCCoUkWeb, {args: url}, (url) => {
             cy.url().should('eq', url.contactTheBBCPage);

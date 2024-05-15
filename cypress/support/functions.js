@@ -15,9 +15,20 @@ const signInFunc = () => {
     cy.get(signIn.signInButton).click({force: true});
 };
 
+const clickOnNavButtonHeader = (selector, url) => {
+    cy.get(selector).eq(0).click({force: true});
+    cy.url().should('eq', url);
+};
+
+const clickOnNavButtonFooter = (selector, url) => {
+    cy.get(selector).eq(1).scrollIntoView().click({force: true});
+    cy.url().should('eq', url);
+};
 
 module.exports = {  
     setViewPort,
     signInFunc,
-    acceptCookies
+    acceptCookies,
+    clickOnNavButtonHeader,
+    clickOnNavButtonFooter
 };

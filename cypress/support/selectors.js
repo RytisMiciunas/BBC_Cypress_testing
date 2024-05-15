@@ -1,21 +1,21 @@
 const homePage = {
-    newsButtons:'[href="/news"]',
-    homeButtons:'[href="/"]',
-    sportButtons:'[href="/sport"]',
-    businessButtons:'[href="/business"]',
-    innovationButtons:'[href="/innovation"]',
-    cultureButtons:'[href="/culture"]',
-    travelButtons:'[href="/travel"]',
-    earthButtons:'[href="/future-planet"]',
-    videoButtons:'[href="/video"]',
-    liveButtons:'[href="/live"]',
-    logo:'[icon="bbc"]',
-    hamburger:'[class="sc-75742244-3 eupXpe"]',
-    searchIcon:'[class="sc-75742244-3 sc-75742244-4 eupXpe hKHSDc"]',
+    newsButtons: '[href="/news"]',
+    homeButtons: '[href="/"]',
+    sportButtons: '[href="/sport"]',
+    businessButtons: '[href="/business"]',
+    innovationButtons: '[href="/innovation"]',
+    cultureButtons: '[href="/culture"]',
+    travelButtons: '[href="/travel"]',
+    earthButtons: '[href="/future-planet"]',
+    videoButtons: '[href="/video"]',
+    liveButtons: '[href="/live"]',
+    logo: '[icon="bbc"]',
+    hamburger: '[class="sc-75742244-3 eupXpe"]',
+    searchIcon: '[class="sc-75742244-3 sc-75742244-4 eupXpe hKHSDc"]',
     searchBar: '[data-testid="search-input-field"]',
     searchEnterButton: '[data-testid="search-input-search-button"]',
-    registerButton:'[aria-label="Register"]',
-    signInButton:'[aria-label="Sign In"]',
+    registerButton: '[aria-label="Register"]',
+    signInButton: '[aria-label="Sign In"]',
     weatherButtons: '[href="https://www.bbc.com/weather"]',
     audioButtons: '[href="https://www.bbc.co.uk/sounds?src_origin=BBCS_BBC"]',
     BBShopButton: '[href="https://shop.bbc.com/"]',
@@ -36,7 +36,7 @@ const homePage = {
     allArticleBlock: '[data-testid="Vermont-grid"]',
     allArticlesTitles: '[data-testid="card-headline"]',
     languageDropbox: '[class="sc-e5f9a6b3-3 eMDdil"]',
-    portugueseOption:'[href="https://www.bbc.com/portuguese?src_origin=BBCS_BBC"]',
+    portugueseOption: '[href="https://www.bbc.com/portuguese?src_origin=BBCS_BBC"]',
     turkishOption: '[href="https://www.bbc.com/turkce?src_origin=BBCS_BBC"]',
     yorubaOption: '[href="https://www.bbc.com/yoruba?src_origin=BBCS_BBC"]'
 };
@@ -68,6 +68,20 @@ const resolution = {
     }
 };
 
+const navButtonsLocatorAndUrl = [
+    { selector: '[href="/news"]', url: 'https://www.bbc.com/news' },
+    { selector: '[href="/"]', url: 'https://www.bbc.com/' },
+    { selector: '[href="/business"]', url: 'https://www.bbc.com/business' },
+    { selector: '[href="/innovation"]', url: 'https://www.bbc.com/innovation' },
+    { selector: '[href="/culture"]', url: 'https://www.bbc.com/culture' },
+    { selector: '[href="/travel"]', url: 'https://www.bbc.com/travel' },
+    { selector: '[href="/future-planet"]', url: 'https://www.bbc.com/future-planet' },
+    { selector: '[href="/video"]', url: 'https://www.bbc.com/video' },
+    { selector: '[href="/live"]', url: 'https://www.bbc.com/live' },
+    { selector: '[href="/sport"]', url: 'https://www.bbc.com/sport' }
+
+];
+
 const url = {
     landingPage: 'https://www.bbc.com/',
     newsPage: 'https://www.bbc.com/news',
@@ -83,8 +97,6 @@ const url = {
     contactPage: 'https://www.bbc.com/contact',
     accountSettingsPage: 'https://account.bbc.com/account/settings',
     weatherPage: 'https://www.bbc.com/weather',
-    verifyAgePage: 'https://account.bbc.com/register?realm=%2F&clientId=Account&action=register&ptrt=https%3A%2F%2Fwww.bbc.com%2F&userOrigin=BBCS_BBC&isCasso=false&redirectUri=https%3A%2F%2Fsession.bbc.com%2Fsession%2Fcallback%3Frealm%3D%2F&service=IdRegisterService&nonce=pukmiMtD-1AFA_VPAxxmQ_WvLcaJisHlszRs',
-    signInPage: 'https://account.bbc.com/auth?realm=%2F&clientId=Account&ptrt=https%3A%2F%2Fwww.bbc.com%2F&userOrigin=BBCS_BBC&isCasso=false&action=sign-in&redirectUri=https%3A%2F%2Fsession.bbc.com%2Fsession%2Fcallback%3Frealm%3D%2F&service=IdSignInService&nonce=Uohx8neR-zJfjWegdMz3t5hTRPiQ_g6PHc4g',
     BBCCoUkWeb: 'https://www.bbc.co.uk',
     BBCShopPage: 'https://shop.bbc.com/',
     termsOfUsePage: 'https://www.bbc.co.uk/usingthebbc/terms',
@@ -175,7 +187,7 @@ const weatherPage = {
     citySearchBar: '[id="ls-c-search__input-label"]',
     searchResults: '[class="ls-c-locations-list-item"]',
     searchButton: '[title="Search for a location"]',
-    
+
 };
 
 const videoPage = {
@@ -189,7 +201,7 @@ const videoPage = {
 
 };
 
-module.exports = {  
+module.exports = {
     homePage,
     url,
     textInPages,
@@ -199,5 +211,6 @@ module.exports = {
     signIn,
     subscriptionRelatedConstants,
     weatherPage,
-    videoPage
+    videoPage,
+    navButtonsLocatorAndUrl
 };
