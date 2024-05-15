@@ -3,7 +3,7 @@
 const { signInFunc } = require("../../support/functions");
 const { homePage, subscriptionRelatedConstants, searchQueries } = require("../../support/selectors");
 
-describe('Make sure BBC.com loads properlly', () => {
+describe('Make sure BBC.com is protected from XSS attacks', () => {
 
 
     it('Test Case 40. Edit display name XSS injection', () => {
@@ -21,3 +21,5 @@ describe('Make sure BBC.com loads properlly', () => {
           
     });
 });
+
+

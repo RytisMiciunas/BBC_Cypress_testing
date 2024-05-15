@@ -2,7 +2,7 @@
 
 const { homePage, searchQueries, url, weatherPage } = require("../../support/selectors");
 
-describe('Make sure BBC.com loads properlly', () => {
+describe('Making sure database is well protected', () => {
 
     it('Test Case 38. search bar SQL injection', () => {
         cy.get(homePage.searchIcon).click({force: true});
@@ -19,3 +19,4 @@ describe('Make sure BBC.com loads properlly', () => {
         cy.get(weatherPage.searchResults).should('have.length.gt', 0);
     });
 });
+

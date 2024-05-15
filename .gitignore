@@ -12,7 +12,8 @@ cypress/videos/
 # Cypress cache
 .cypress_cache/
  
- 
+# Project related files
+Test_realated_docs/
 # Dependency directories
 # Remove the comments below if you want to include them
 # /node_modules/

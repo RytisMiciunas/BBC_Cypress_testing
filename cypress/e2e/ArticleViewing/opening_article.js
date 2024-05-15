@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 const { homePage } = require('../../support/selectors')
 
-describe('Make sure BBC.com loads properlly', () => {
+describe('Make sure article opens correctly ', () => {
 
     it('Test Case 17. Verify left article has a picture and opens', () => {
         cy.get(homePage.leftArticleBlock).children().eq(0).as('article');

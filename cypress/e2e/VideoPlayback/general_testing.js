@@ -3,7 +3,7 @@
 const { acceptCookies } = require("../../support/functions");
 const { homePage, videoPage } = require("../../support/selectors");
 
-describe('Make sure BBC.com loads properlly', () => {
+describe('Testing general video page functionality', () => {
     beforeEach(() => {
         cy.get(homePage.videoButtons).eq(0).click({ force: true });
         acceptCookies();

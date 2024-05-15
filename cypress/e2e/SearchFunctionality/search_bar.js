@@ -2,7 +2,7 @@
 
 const { homePage, searchQueries } = require("../../support/selectors");
 
-describe('Make sure BBC.com loads properlly', () => {
+describe('Testing search functionality', () => {
     beforeEach(() => {
         cy.get(homePage.searchIcon).click({ force: true });
     });

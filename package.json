@@ -4,7 +4,7 @@
     "description": "Cypress testing project",
     "main": "cypress.config.js",
     "scripts": {
-        "test-chrome": "npx cypress run --browser chrome --spec 'cypress/e2e/HomepageRendering/works_on_Chrome.js'",
+        "test:chrome": "npx cypress run --browser chrome --spec 'cypress/e2e/HomepageRendering/works_on_Chrome.js'",
         "test:firefox": "npx cypress run --browser firefox --spec 'cypress/e2e/HomepageRendering/works_on_Firefox.js'",
         "test:edge": "npx cypress run --browser edge --spec 'cypress/e2e/HomepageRendering/works_on_Edge.js'",
         "test:ArticleViewing": "npx cypress run --spec 'cypress/e2e/articleViewing/*'",
@@ -16,7 +16,9 @@
         "test:ResponsiveDesign": "npx cypress run --spec 'cypress/e2e/ResponsiveDesign/*'",
         "test:SearchFunctionality": "npx cypress run --spec 'cypress/e2e/SearchFunctionality/*'",
         "test:VideoPlayback": "npx cypress run --spec 'cypress/e2e/VideoPlayback/*'",
-        "test:all": "npm run test:ArticleViewing & npm run test:CyberSecurity & npm run test:HomepageNavigation & npm run test:HomepageRendering & npm run test:LanguageSelection & npm run test:NewsletterSubscription & npm run test:ResponsiveDesign & npm run test:SearchFunctionality & npm run test:VideoPlayback"
+        "test:all": "npm run test:ArticleViewing & npm run test:CyberSecurity & npm run test:HomepageNavigation & npm run test:HomepageRendering & npm run test:LanguageSelection & npm run test:NewsletterSubscription & npm run test:ResponsiveDesign & npm run test:SearchFunctionality & npm run test:VideoPlayback",
+        "test:Ipresent": "npm run test:HomepageNavigation & npm run test:ResponsiveDesign & test:SearchFunctionality",
+        "lastHope": "echo 'everything's fine, hope didn't die'"
     },
     "author": "",
     "license": "ISC",

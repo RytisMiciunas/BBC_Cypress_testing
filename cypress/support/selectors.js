@@ -122,8 +122,11 @@ const articlePage = {
     emailButton: '[data-testid="emailShareButton"]',
     shareDropbox: '[data-testid="popoverStyled"]',
     copiedLink: '[aria-label="Link copied"]',
-    suggestedArticlesConteiner: ':nth-child(1) > [data-testid="anchor-inner-wrapper"] > [data-testid="internal-link"] > .sc-76a64d5e-4'
-
+    suggestedArticlesConteiner: ':nth-child(1) > [data-testid="anchor-inner-wrapper"] > [data-testid="internal-link"] > .sc-76a64d5e-4',
+    dateContainerOfSuggestedArticles: '[class="sc-df20d569-1 kGLWUB"]',
+    pauseButton: '[data-testid="cta-play-icon"]',
+    videoTime: 'smp-thumbnail-scrubbing',
+    currentArticleReleaseDate: '[class="sc-274a798b-9 brPRx"]'
 };
 
 const searchQueries = {

@@ -2,7 +2,7 @@
 const { signInFunc } = require('../../support/functions');
 const { url, homePage, signIn, subscriptionRelatedConstants } = require('../../support/selectors')
 
-describe('Make sure BBC.com loads properlly', () => {
+describe('Make sure subscribe and unsubscribe works properlly', () => {
     beforeEach(() => {
         cy.get(homePage.signInButton).eq(0).click({force:true});
         signInFunc();

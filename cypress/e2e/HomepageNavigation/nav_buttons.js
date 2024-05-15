@@ -4,6 +4,10 @@ const { url, homePage } = require('../../support/selectors')
 
 describe('Navigation buttons', () => {
 
+    it('Test Case 2, 3, 4. header navigation buttons test', () => {
+        cy.get(homePage.newsButtons).eq(0).click({force: true});
+        cy.url().should('eq', url.newsPage);
+    });
 
     it('Test Case 2. Homepage, News and Sport button test', () => {
         cy.get(homePage.newsButtons).eq(0).click({force: true});
