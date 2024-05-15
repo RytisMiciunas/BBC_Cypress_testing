@@ -1,5 +1,0 @@
-it('checks for SQL injection vulnerability', () => {
-    cy.visit('http://example.com/search?query=1 OR 1=1');
-    cy.contains('Error:').should('not.exist');
-  });
-})
