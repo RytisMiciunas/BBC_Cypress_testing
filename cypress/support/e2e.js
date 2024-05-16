@@ -15,18 +15,16 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import { acceptCookies } from './functions';
 
 Cypress.on("uncaught:exception", (err, runnable) => {
     return false;
   });
 
 beforeEach(() => {
-    cy.visit('/'); // Correct the URL to include the protocol
+    cy.visit('/'); 
+    acceptCookies();    
+});
     
-    cy.get('iframe[title="SP Consent Message"]').then(($iframe) => {        //accept cookies           
-        cy.wrap($iframe).its("0.contentDocument.body").find('button[aria-label="I agree"]').click({ force: true });
-    });
-    
-}); 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

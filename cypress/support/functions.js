@@ -1,6 +1,14 @@
 const acceptCookies = () => {
-    cy.get('iframe[title="SP Consent Message"]').then(($iframe) => {        //accept cookies           
-        cy.wrap($iframe).its("0.contentDocument.body").find('button[aria-label="I agree"]').click({ force: true });
+    cy.wait(2000);
+    cy.get(mainFunctionLocators.BBC_BODY).then(($body) => {
+      if ($body.find(mainFunctionLocators.IFRAME).is(":visible")) {
+        cy.get(mainFunctionLocators.IFRAME).then(($iframe) => {
+          cy.wrap($iframe)
+            .its(mainFunctionLocators.IFRAME_BODY)
+            .find(mainFunctionLocators.IFRAME_AGREE_BUTTON)
+            .click({ force: true });
+        });
+      }
     });
 };
 
