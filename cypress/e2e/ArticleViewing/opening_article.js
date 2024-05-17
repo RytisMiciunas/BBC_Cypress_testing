@@ -10,10 +10,10 @@ describe('Make sure article opens correctly ', () => {
         cy.url().should('include', 'news');
     });
 
-    it('Test Case 18. Verify central article has a picture and opens', () => {
+    it.only('Test Case 18. Verify central article has a picture and opens', () => {
         cy.get(homePage.centralArticle).children().as('article');
         cy.get('@article').find('img').should('exist');
-        cy.get('@article').find('[href]').click({force: true});
+        cy.get('@article').find('[href]').eq(0).click({force: true});
         cy.url().should('include', 'news');
     });
 

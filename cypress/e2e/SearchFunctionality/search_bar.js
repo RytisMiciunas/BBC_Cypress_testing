@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 
+const { acceptCookies } = require("../../support/functions");
 const { homePage, searchQueries } = require("../../support/selectors");
 
 describe('Testing search functionality', () => {
@@ -10,6 +11,7 @@ describe('Testing search functionality', () => {
     it('Test Case 33. Inputting invalid value into search bar', () => {
         cy.get(homePage.searchBar).type(searchQueries.invalidInput);
         cy.get(homePage.searchEnterButton).click({ force: true });
+        acceptCookies();
         cy.get(homePage.allArticlesTitles).then(($titles) => {
             // Make sure there are at least three titles
             if ($titles.length < 3) {
@@ -31,6 +33,7 @@ describe('Testing search functionality', () => {
     it('Test Case 34. Inputting valid one word query into search bar', () => {
         cy.get(homePage.searchBar).type(searchQueries.oneWordValid);
         cy.get(homePage.searchEnterButton).click({ force: true });
+        acceptCookies();
         cy.get(homePage.allArticlesTitles).then(($titles) => {
             // Make sure there are at least three titles
             if ($titles.length < 3) {
@@ -52,6 +55,7 @@ describe('Testing search functionality', () => {
     it('Test Case 35.1 Inputting valid two word query into search bar', () => {
         cy.get(homePage.searchBar).type(searchQueries.twoWordsValid1);
         cy.get(homePage.searchEnterButton).click({ force: true });
+        acceptCookies();
         cy.get(homePage.allArticlesTitles).then(($titles) => {
             // Make sure there are at least three titles
             if ($titles.length < 3) {
@@ -73,6 +77,7 @@ describe('Testing search functionality', () => {
     it('Test Case 35.2 Inputting valid two word query into search bar', () => {
         cy.get(homePage.searchBar).type(searchQueries.twoWordsValid2);
         cy.get(homePage.searchEnterButton).click({ force: true });
+        acceptCookies();
         cy.get(homePage.allArticlesTitles).then(($titles) => {
             // Make sure there are at least three titles
             if ($titles.length < 3) {

@@ -19,16 +19,6 @@ const homePage = {
     weatherButtons: '[href="https://www.bbc.com/weather"]',
     audioButtons: '[href="https://www.bbc.co.uk/sounds?src_origin=BBCS_BBC"]',
     BBShopButton: '[href="https://shop.bbc.com/"]',
-    termsOfuseButton: '[href="https://www.bbc.co.uk/usingthebbc/terms"]',
-    aboutTheBBCButton: '[href="https://www.bbc.co.uk/aboutthebbc"]',
-    privatPolicyButton: '[href="https://www.bbc.com/usingthebbc/privacy/"]',
-    cookiesButton: '[href="https://www.bbc.com/usingthebbc/cookies/"]',
-    accessabilityHelpButton: '[href="https://www.bbc.co.uk/accessibility/"]',
-    contactTheBBCButton: '[href="https://www.bbc.co.uk/contact"]',
-    advertiseWithUsButton: '[href="https://www.bbc.com/advertisingcontact"]',
-    doNotShareOrSellMyInfoButton: '[href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"]',
-    contactTechnicalSupportButton: '[href="https://www.bbc.com/contact-bbc-com-help"]',
-    readAboutOurApproachToExternalLinkingButton: '[href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"]',
     leftArticleBlock: '[data-testid="first-grid"]',
     centralArticle: '[class="sc-5b94fa74-0 gyIGmm"]',
     rightArticleBlock: '[data-testid="second-grid"]',
@@ -39,6 +29,7 @@ const homePage = {
     portugueseOption: '[href="https://www.bbc.com/portuguese?src_origin=BBCS_BBC"]',
     turkishOption: '[href="https://www.bbc.com/turkce?src_origin=BBCS_BBC"]',
     yorubaOption: '[href="https://www.bbc.com/yoruba?src_origin=BBCS_BBC"]'
+
 };
 
 const resolution = {
@@ -81,6 +72,26 @@ const navButtonsLocatorAndUrl = [
     { selector: '[href="/sport"]', url: 'https://www.bbc.com/sport' }
 
 ];
+const navLinksInFooterLocatorAndUrl = [
+    { selector: '[href="https://www.bbc.co.uk/usingthebbc/terms"]', url: 'https://www.bbc.co.uk/usingthebbc/terms' },
+    { selector: '[href="https://www.bbc.co.uk/aboutthebbc"]', url: 'https://www.bbc.co.uk/aboutthebbc' },
+    { selector: '[href="https://www.bbc.co.uk/accessibility/"]', url: 'https://www.bbc.co.uk/accessibility/' },
+    { selector: '[href="https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links"]', url: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links' },
+    { selector: '[href="https://www.bbc.co.uk/contact"]', url: 'https://www.bbc.co.uk/contact' },
+    { selector: '[href="https://www.bbc.com/usingthebbc/privacy/"]', url: 'https://www.bbc.com/usingthebbc/privacy/' },
+    { selector: '[href="https://www.bbc.com/usingthebbc/cookies/"]', url: 'https://www.bbc.com/usingthebbc/cookies/' },
+    { selector: '[href="https://www.bbc.com/advertisingcontact"]', url: 'https://www.bbc.com/advertisingcontact' },
+    { selector: '[href="https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/"]', url: 'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/' },
+    { selector: '[href="https://www.bbc.com/contact-bbc-com-help"]', url: 'https://www.bbc.com/contact-bbc-com-help' }
+
+];
+
+
+const cookies = {
+    IFRAME: 'iframe[title="SP Consent Message"]',
+    IFRAME_BODY: '0.contentDocument.body',
+    IFRAME_AGREE_BUTTON: 'button[aria-label="I agree"]'
+};
 
 const url = {
     landingPage: 'https://www.bbc.com/',
@@ -99,21 +110,10 @@ const url = {
     weatherPage: 'https://www.bbc.com/weather',
     BBCCoUkWeb: 'https://www.bbc.co.uk',
     BBCShopPage: 'https://shop.bbc.com/',
-    termsOfUsePage: 'https://www.bbc.co.uk/usingthebbc/terms',
-    aboutTheBBCPage: 'https://www.bbc.co.uk/aboutthebbc',
-    privatPolicyPage: 'https://www.bbc.com/usingthebbc/privacy/',
-    cookiesPage: 'https://www.bbc.com/usingthebbc/cookies/',
-    accessabilityHelpPage: 'https://www.bbc.co.uk/accessibility/',
-    contactTheBBCPage: 'https://www.bbc.co.uk/contact',
-    advertiseWithUsPage: 'https://www.bbc.com/advertisingcontact',
-    doNotShareOrSellMyInfoPage: 'https://www.bbc.com/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/',
-    ContactTechnicalSupportPage: 'https://www.bbc.com/contact-bbc-com-help',
-    readAboutOurApproachToExternalLinkingpage: 'https://www.bbc.co.uk/editorialguidelines/guidance/feeds-and-links',
     articleChosenToTest: 'https://www.bbc.com/news/world-us-canada-68901032',
     portugueseUrl: 'https://www.bbc.com/portuguese?src_origin=BBCS_BBC',
     turkishUrl: 'https://www.bbc.com/turkce?src_origin=BBCS_BBC',
     yorubaUrl: 'https://www.bbc.com/yoruba?src_origin=BBCS_BBC'
-
 };
 
 const textInPages = {
@@ -212,5 +212,7 @@ module.exports = {
     subscriptionRelatedConstants,
     weatherPage,
     videoPage,
-    navButtonsLocatorAndUrl
+    navButtonsLocatorAndUrl,
+    cookies,
+    navLinksInFooterLocatorAndUrl
 };

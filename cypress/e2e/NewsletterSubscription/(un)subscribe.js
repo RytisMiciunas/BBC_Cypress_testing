@@ -20,7 +20,6 @@ describe('Make sure subscribe and unsubscribe works properlly', () => {
     });
     
     it('Test Case 37. Unsubscribe', () => {
-
         cy.get(subscriptionRelatedConstants.settingsOptionInMenu).eq(0).click({force: true});
         cy.get(subscriptionRelatedConstants.emailPreferencesButton).click({force: true});
         cy.get(subscriptionRelatedConstants.unsubscribeCheckbox).click({force: true}).should('not.be.checked');

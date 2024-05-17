@@ -21,8 +21,6 @@ describe('Article content validation', () => {
         cy.get(articlePage.shareDropbox).find(articlePage.copiedLink).should('exist');
         cy.get(articlePage.facebookButton).should('be.visible');
         cy.get(articlePage.facebookButton).invoke('removeAttr', 'target').click();
-
-
         cy.get(articlePage.twitterButton).should('be.visible');
         cy.get(articlePage.emailButton).should('be.visible');
 });
