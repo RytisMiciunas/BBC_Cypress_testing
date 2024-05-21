@@ -1,4 +1,4 @@
-const { cookies, signIn, url } = require('./selectors')
+const { cookies, signIn, homePage } = require('./selectors')
 
 
 const acceptCookies = () => {
@@ -43,6 +43,24 @@ const clickOnNavLinksInFooter = (selector, pageUrl) => {
     cy.go('back');
 };
 
+const chechFirst3Titles = (input) => {
+    cy.get(homePage.allArticlesTitles).then(($titles) => {
+        // Make sure there are at least three titles
+        if ($titles.length < 3) {
+            $titles.each(($el) => {
+                // Assert that each element's text includes the keyword
+                expect($el.text()).to.include(input);
+            });
+        }
+        else {
+            // Check the first three titles for the keyword
+            for (let i = 0; i < 3; i++) {
+                expect($titles.eq(i).text()).to.include(input);
+            }
+        }
+    });
+}
+
 
 
 module.exports = {
@@ -51,5 +69,6 @@ module.exports = {
     acceptCookies,
     clickOnNavButtonHeader,
     clickOnNavButtonFooter,
-    clickOnNavLinksInFooter
+    clickOnNavLinksInFooter,
+    chechFirst3Titles
 };

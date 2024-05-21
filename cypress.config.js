@@ -12,6 +12,10 @@ module.exports = defineConfig({
     viewportHeight: 1080,
     viewportWidth: 1920,
     defaultCommandTimeout: 10000,
-    includeShadowDom: true
+    includeShadowDom: true,
+    retries: {
+        runMode: 2,
+        openMode: 2
+    }
   },
 });
